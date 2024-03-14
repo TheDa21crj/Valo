@@ -1,9 +1,11 @@
 jQuery(document).ready(function () {
   // Character Image Js
   var scene = document.querySelectorAll(".scene");
+
   scene.forEach(function (el) {
     var parallax = new Parallax(el);
   });
+
   // Slider Js
   jQuery(".banner-section-inner").slick({
     infinite: true,
@@ -16,6 +18,7 @@ jQuery(document).ready(function () {
     asNavFor: ".controller-right-icons-inner",
     touchThreshold: 100,
   });
+
   jQuery(".controller-right-icons-inner").slick({
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -25,6 +28,7 @@ jQuery(document).ready(function () {
     focusOnSelect: true,
     variableWidth: true,
   });
+
   function onLoadTest() {
     jQuery(".banner-section-loop").each(function (i) {
       var j = i + 1;
@@ -37,7 +41,9 @@ jQuery(document).ready(function () {
       }
     });
   }
+
   window.onload = onLoadTest();
+
   function customclassadd() {
     if (jQuery(".banner-loop-one").hasClass("slick-current")) {
       jQuery(".header-section-main").removeClass("header-section-orange");
@@ -83,10 +89,12 @@ jQuery(document).ready(function () {
       });
     },
   });
+
   window.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
+
   cursorScale.forEach((link) => {
     link.addEventListener("mousemove", () => {
       cursor.classList.add("grow");
